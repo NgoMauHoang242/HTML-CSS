@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mậu học HTML </title>
+  </head>
+  <body style="background-color: aqua">
+    <h1>Chào</h1>
+    <h6>mừng</h6>
+    <hr />
+    <p>Thường</p>
+    <p>là <b>in đậm</b></p>
+    <p>là <i>in nghiêng</i></p>
+    <p>là <big>lớn</big></p>
+    <p>là <small>nhỏ</small></p>
+    <p>là <sub>subcript</sub></p>
+    <p>là <ins>inserted</ins></p>
+    <p>là <del>deleted</del></p>
+    <p>là <mark>marked</mark></p>
+    <hr />
+    <p>
+      Lorem ipsum, dolor sit<br />
+      amet consectetur adipisicing elit.
+    </p>
+    <hr />
+    <a href="https://www.facebook.com/">
+      <img src="/images/maucuoilat.jpg" height="300px" alt="Mậu" title="Mậu" />
+    </a>
+    <p>
+      <div> Distinctio blanditiis facilis commodi</div>nemo tempora quis
+      similique quod dignissimos harum dolores, est dolorem vitae id quidem
+      doloremque perspiciatis reprehenderit. Distinctio.
+    </p>
+    <p>
+        <span style="color: blue;">Distinctio blanditiis facilis commodi</span> laboriosam nemo tempora quis
+        similique quod dignissimos harum dolores, est dolorem vitae id quidem
+        doloremque perspiciatis reprehenderit. Distinctio.
+      </p>
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+    <a href="https://www.youtube.com/" target="_self">Youtube</a>
+    <audio loop muted controls>
+      <source src="3-3-04.mp3" type="audio/mpeg" />
+      <source src="3-3-04.wav" type="audio/mpeg" />
+    </audio>
+    <video loop autoplay muted controls width="300px">
+      <source src="Gói 1 đô học tiếng Việt siêu dễ.mp4" />
+      <source src="Gói 1 đô học tiếng Việt siêu dễ.webm" />
+      <source src="Gói 1 đô học tiếng Việt siêu dễ.ogv" />
+    </video>
+    <!--  List -->
+<a href="/1.html" target="_blank">Nhấp a</a>
+
+    <h2>Unordered list</h2>
+    <ul>
+      <li>
+        Thịt
+        <ul>
+          <li>bò</li>
+          <li>trâu</li>
+        </ul>
+      </li>
+      <li>Rau</li>
+    </ul>
+    <h2>Ordered list</h2>
+    <ol>
+      <li>Hoa</li>
+      <li>Quả</li>
+    </ol>
+    <h2>Description List</h2>
+    <dl>
+      <dt>Món ngon</dt>
+      <dd>Pizza</dd>
+    </dl>
+    <table bgcolor="black">
+      <tr bgcolor="grey">
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Ngành học</th>
+      </tr>
+      <tr bgcolor="lightgrey">
+        <td>o1</td>
+        <td>Mậu</td>
+        <td>Software Engineer</td>
+      </tr>
+    </table>
+    <!-- Nhúng -->
+    <iframe width ="100%" src ="https://www.bing.com/search?q=roadmap&gs_lcrp=EgRlZGdlKgcIABBFGMIDMgcIABBFGMIDMgcIARBFGMID0gEOMjE5MjYwOTI3OGowajGoAgKwAgE&FORM=ANNTA1&PC=ACTS"></iframe>
+    <!-- Button -->
+    <button onClick="changeText()" style ="border-radius: 5px; background-color: aquamarine;" >Click me</button>
+    <h1 id = "h1id">Hello</h1>
+    <script>
+        changeText  = () =>{
+            document.getElementById("h1id").innerHTML = "Goodbye";
+        }
+    </script>
+    <form>
+      <h1>Đăng nhập</h1>
+      <div>
+        <label for = "fname">firstname: </label>
+        <input type ="text" id = "fname" name ="fname"><br>
+      </div>
+      <div>
+        <label for = "lname">lastname: </label>
+        <input type ="text" id = "lname" name ="lname"><br>
+      </div>
+      <div>
+        <label for = "pass">password: </label>
+        <input type ="password" id = "pass" name ="pass"><br>
+      </div>
+      <div>
+        <label for = "date">date: </label>
+        <input type ="date" id = "date" name ="date"><br>
+      </div>
+      <div>
+        <label for = "date">Age </label>
+        <input type ="number" id = "age" name ="age"><br>
+      </div>
+      <div>
+        <select name = "major">
+          <option value="CNTT">CNTT</option>
+          <option value="IOT">IOT</option>
+          <option value="AI">AI</option>
+        </select>
+      </div>
+      <div>
+        <input type ="radio" name="role" value ="Student">Student
+        <input type ="radio" name="role" value ="Teacher">Teacher
+        <input type ="radio" name="role" value ="Staff">Staff
+      </div>
+      <input type ="submit"> 
+      <input type ="reset">
+    </form>
+</body>
+</html>
