@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">TODO-LIST</h2>
+        <button class="btnLogin-popup">Đăng Nhập</button>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="from-box Login">
+        <h2>Đăng Nhập</h2>
+        <form action="#">
+          <div class="input-box">
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" />Ghi nhớ tôi</label>
+            <a href="#">Quên mật khẩu?</a>
+          </div>
+          <button type="submit" class="btn">Đăng Nhập</button>
+          <div class="login-register">
+            <p>
+              Bạn chưa có tài khoản?
+              <a href="#" class="register-link">Đăng Ký</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="from-box Register">
+        <h2>Đăng Ký</h2>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" required />
+            <label>User</label>
+          </div>
+          <div class="input-box">
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" /> Tôi đồng ý với các điều khoản và điều
+              kiện</label
+            >
+          </div>
+          <button type="submit" class="btn">Đăng Ký</button>
+          <div class="login-register">
+            <p>
+              Bạn đã có tài khoản? <a href="#" class="login-link">Đăng Nhập</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./DangNhap.js"></script>
+  </body>
+</html>
