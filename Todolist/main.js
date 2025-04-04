@@ -1,5 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const completedContainer = document.getElementById("completed-container");
 function addTask() {
   if (inputBox.value === "") {
     alert("Bạn cần viết gì đó!");
@@ -19,11 +20,21 @@ function addTask() {
   inputBox.value = "";
   saveData();
 }
+function resetList() {
+  listContainer.innerHTML = "";
+  localStorage.removeItem("data");
+}
+inputBox.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
 listContainer.addEventListener(
   "click",
   function (e) {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
+      completedContainer.appendChild(e.target);
       saveData();
     } else if (e.target.classList.contains("delete")) {
       e.target.parentElement.remove();
@@ -40,10 +51,30 @@ listContainer.addEventListener(
   },
   false
 );
+completedContainer.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.classList.contains("delete")) {
+      e.target.parentElement.remove();
+      saveData();
+    } else if (e.target.classList.contains("edit")) {
+      let li = e.target.parentElement;
+      let currentText = li.firstChild.textContent;
+      let newText = prompt("Sửa nội dung:", currentText);
+      if (newText !== null && newText !== "") {
+        li.firstChild.textContent = newText;
+        saveData();
+      }
+    }
+  },
+  false
+);
 function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
+  localStorage.setItem("completedData", completedContainer.innerHTML);
 }
 function showViec() {
-  listContainer.innerHTML = localStorage.getItem("data");
+  listContainer.innerHTML = localStorage.getItem("data") || "";
+  completedContainer.innerHTML = localStorage.getItem("completedData") || "";
 }
 showViec();

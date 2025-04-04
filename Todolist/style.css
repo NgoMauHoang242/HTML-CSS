@@ -7,7 +7,7 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: aquamarine;
+  background: whitesmoke;
   padding: 15px;
 }
 .todo-app {
@@ -49,11 +49,11 @@ input {
 button {
   border: none;
   outline: none;
-  padding: 16px 50px;
+  padding: 16px 20px;
   background: blue;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 20px;
   color: white;
 }
 ul li {
@@ -112,4 +112,12 @@ ul li span.edit:hover {
 }
 ul li span.delete:hover {
   background: whitesmoke;
+}
+.done {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  margin: 0px auto 20px;
+  padding: 40px 30px 50px;
 }
